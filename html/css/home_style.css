@@ -1,0 +1,36 @@
+/*본문 부분*/
+.intro {
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+  color: #8041D9;
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 120px;
+}
+
+.myemoji {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.myemoji>img {
+  align-items: center;
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0 10px 60px -10px rgba(13, 28, 39, .5);
+}
+
+.name{
+  text-align: center;
+  font-size: 80px;
+  margin-top: 40px;
+}

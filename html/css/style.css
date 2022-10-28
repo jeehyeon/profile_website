@@ -3,17 +3,18 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: bisque;
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #bfa0ed;
   padding: 0px 12px;
+  box-shadow: 0px 3px 12px #1B0075;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: bisque;
 }
 
 .navbar__logo {
@@ -41,13 +42,15 @@ a {
 }
 
 .navbar__menu li:hover {
-  background-color: #3F0099;
+  background-color: #8041D9;
   border-radius: 10px;
 }
 
 .navbar__login {
   display: flex;
   font-size: 25px;
+  width: 186px;
+  justify-content: right;
 }
 
 .navbar__togglebtn {
