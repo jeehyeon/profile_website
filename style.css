@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: bisque;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #bfa0ed;
+  padding: 0px 12px;
+}
+
+.navbar__logo {
+  font-size: 30px;
+  color: white;
+}
+
+.navbar__logo i {
+  color: #47C83E;
+}
+
+.navbar__logo a {
+  font-weight: bold;
+}
+
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  font-size: 25px;
+}
+
+.navbar__menu li {
+  padding: 8px 12px;
+}
+
+.navbar__menu li:hover {
+  background-color: #3F0099;
+  border-radius: 10px;
+}
+
+.navbar__login {
+  display: flex;
+  font-size: 25px;
+}
+
+.navbar__togglebtn {
+  display: none; /*기본설정. 안보이게*/
+  position: absolute;
+  right: 32px;
+  font-size: 30px;
+  color: #47C83E;
+}
+
+@media screen and (max-width: 768px) { /*스크린 크기가 작을 때의 반응성 설정 */
+  .navbar {
+    flex-direction: column;  /*아래로 떨어지는 메뉴바형식 */
+    align-items: flex-start; /*로고 부분은 왼쪽 정렬 */
+    padding: 8px 24px; /*hover시 칠해지는 부분이 너무 꽉 말고 여유 있게 칠해지게끔 */
+  }
+
+  .navbar__menu {
+    display: none;
+    flex-direction: column; /*메뉴 부분도 아래로 떨어지는 형식 */
+    align-items: center; /*메뉴는 가운데 정렬 */
+    width: 100%; /*메뉴자체 너비가 원래 작아서 가운데 정렬이 안되니깐 크게하기 */
+  }
+
+  /* 메뉴 부분에 hover했을때 전체적으로 색 칠해지게끔 */
+  .navbar__menu li {
+    width: 100%; /*각 목록 크기를 넓혀야 색이 가로로 꽉차게 칠해짐 */
+    text-align: center; /*글자가 가운데 오게*/
+  }
+
+  /*로그인 버튼도 가운데 오게끔 하기*/
+  .navbar__login {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .navbar__togglebtn { /*크기가 작아지면 버튼 나오게*/
+    display: block;
+  }
+
+  .navbar__menu.active,
+  .navbar__login.active {
+    display: flex;
+  }
+}
